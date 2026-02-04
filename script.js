@@ -19,9 +19,9 @@ async function getPokemon(query) {
 
 function showSuggestions(list) {
     ul.innerHTML = "";
-    list.slice(0, 10).forEach(item => {
+    list.forEach(item => {
         let li = document.createElement("li");
-        li.textContent = item.name;
+        li.innerText = item.name;
         ul.appendChild(li);
     });
 }
