@@ -12,9 +12,7 @@ async function getPokemon(query) {
         let results = b.results.filter(pokemon =>
             pokemon.name.includes(query)
         );
-
         showSuggestions(results);
-
 }
 
 function showSuggestions(list) {
@@ -22,7 +20,7 @@ function showSuggestions(list) {
     list.forEach(item => {
         let li = document.createElement("li");
         li.innerText = item.name;
-        ul.appendChild(li);
+        ul.append(li);
         li.addEventListener("click", ()=>{
             search.value = li.innerText;
         });
