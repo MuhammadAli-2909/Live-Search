@@ -7,10 +7,10 @@ async function getPokemon(query) {
         ul.innerHTML = "";
         return;
     }
-    let a = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000");
+    let a = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1350");
     let b = await a.json();
-    let results = b.results.filter(pokemon =>
-        pokemon.name.includes(query)
+    let results = b.results.filter(poke =>
+        poke.name.includes(query)
     );
     showSuggestions(results);
 }
@@ -27,7 +27,9 @@ function showSuggestions(list) {
     });
 }
 search.addEventListener("input", () => {
-    ul.style.backgroundColor = "#252525";
+    if (search.value.length > 2) {
+        ul.style.backgroundColor = "#252525";
+    }
     clearTimeout(timer);
     timer = setTimeout(() => {
         getPokemon(search.value);
