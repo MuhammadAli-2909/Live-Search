@@ -23,6 +23,9 @@ function showSuggestions(list) {
         let li = document.createElement("li");
         li.innerText = item.name;
         ul.appendChild(li);
+        li.addEventListener("click", ()=>{
+            search.value = li.innerText;
+        });
     });
 }
 search.addEventListener("input", () => {
@@ -32,8 +35,3 @@ search.addEventListener("input", () => {
         getPokemon(search.value);
     }, 500);
 });
-
-async function main() {
-    await getPokemon();
-}
-main();
