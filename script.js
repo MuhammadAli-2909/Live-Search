@@ -10,7 +10,7 @@ async function getPokemon(query) {
         let a = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000");
         let b = await a.json();
         let results = b.results.filter(pokemon =>
-            pokemon.name.includes(query.toLowerCase())
+            pokemon.name.includes(query)
         );
 
         showSuggestions(results);
