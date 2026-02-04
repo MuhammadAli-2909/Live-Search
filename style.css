@@ -1,12 +1,14 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
-header{
+
+header {
     background-color: rgb(219, 41, 41);
     border-radius: 0 0 15px 15px;
     display: flex;
@@ -14,44 +16,53 @@ header{
     box-shadow: 0 3px 10px black;
     padding: 5px 0 5px 60px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-around;
     width: 100%;
     align-items: center;
-}nav .menu{
+}
+
+nav .menu {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-nav a{
+
+nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
 }
-#poke{
+
+#poke {
     background-color: brown;
     padding: 5px 10px;
     border-radius: 10px;
 }
-.account{
+
+.account {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.searching{
+
+.searching {
     position: relative;
 }
-.search{
+
+.search {
     border-radius: 30px;
     height: 40px;
     width: 300px;
     border: none;
-    padding-left: 12px;
+    padding: 0 12px;
     font-size: 16px;
 }
-.searching ul{
+
+.searching ul {
     position: absolute;
     top: 43px;
     bottom: 0;
@@ -63,12 +74,14 @@ nav a{
     color: white;
     padding: 10px 20px;
 }
-.searching ul li{
+
+.searching ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
     padding: 5px 0;
     cursor: pointer;
 }
-.acc{
+
+.acc {
     border-radius: 50%;
     background-color: aliceblue;
 }
